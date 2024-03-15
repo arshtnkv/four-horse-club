@@ -1,0 +1,39 @@
+mixin info()
+  section.info
+    .container
+      h2.visually-hidden Информация о турнире
+      .info__header
+        p.title.title--h3 Чтобы поддержать Международный васюкинский турнир <span class="title title--h3" data-da=".info__header, 1023">посетите лекцию на тему: <span class="text-red">«Плодотворная дебютная идея»</span></span>
+        .info__header-img
+          +img("content/info", "image-1", "png", 394, 250, "Image 1")
+      .info__main
+        .info__main-img
+          +img("content/info", "image-2", "png", 474, 527, "Image 2")
+        .info__content
+          h3.info__main-title.title.title--h3 и Сеанс <span class="text-red">одновременной игры в шахматы на 160 досках</span> гроссмейстера О. Бендера
+          .info__table
+            table
+              colgroup
+                col
+                col
+              tr
+                th Место проведения:
+                td Клуб «Картонажник»
+              tr
+                th Дата и время мероприятия:
+                td 22 июня 1927 г. в 18:00
+              tr
+                th Стоимость входных билетов:
+                td 20 коп.
+              tr
+                th Плата за игру:
+                td 50 коп.
+              tr
+                th Взнос на телеграммы:
+                td <del>100 руб.</del> 21 руб. 16 коп.
+          .info__link
+            +btn({
+              text: "По всем вопросам обращаться в администрацию к К. Михельсону",
+              href: "#",
+              isExternal: true
+              }).btn--link(aria-label="Ссылка")

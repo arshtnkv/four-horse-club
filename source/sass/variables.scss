@@ -1,0 +1,25 @@
+$color-default-black:               #000000;
+$color-default-white:               #ffffff;
+$color-transparent:                 rgba(255, 255, 255, 0);
+$color-accent-main:                 #e9ded4;
+$color-accent-second:               #313131;
+
+$color-nero:                        #1f1f1f;
+$color-kournikova:                  #fbce51;
+$color-red-orange:                  #F54932;
+$color-light-grey:                  #d0d0d0;
+$color-light-grey-2:                #d6d6d6;
+$color-mariner:                     #3057a2;
+
+$fz-default:                        18px;
+$index:                             calc(1vw + 1vh);
+
+$ff-merriweather:                   "Merriweather", "Arial", sans-serif;
+$ff-golos:                          "Golos Text", "Arial", sans-serif;
+
+$tf-default:                        ease;
+$trans-default:                     0.3s $tf-default;
+
+$vp-768:                            768px;
+$vp-1024:                           1024px;
+$vp-1280:                           1280px;

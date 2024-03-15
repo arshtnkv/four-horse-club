@@ -1,0 +1,107 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font: inherit;
+  color: inherit;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+
+  &--blue {
+    padding: 7px 11px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 120%;
+    color: $color-mariner;
+    border: 1px solid $color-mariner;
+    transition: background-color $trans-default, color $trans-default;
+
+    @include hover-focus {
+      color: $color-default-white;
+      background-color: $color-mariner;
+      text-decoration-color: $color-mariner;
+      transition: background-color $trans-default, color $trans-default;
+    }
+  }
+
+  &--link{
+    color: $color-mariner;
+    text-decoration: underline;
+    text-decoration-color: $color-transparent;
+    text-underline-offset: 3px;
+    transition: text-decoration-color $trans-default;
+
+    @include hover-focus {
+      text-decoration-color: $color-mariner;
+      transition: text-decoration-color $trans-default;
+    }
+  }
+
+  &--black {
+    padding: 15px 49px;
+    color: $color-default-white;
+    background-color: $color-nero;
+    transition: background-color $trans-default, color $trans-default;
+
+    @include hover-focus {
+      color: $color-nero;
+      background-color: $color-kournikova;
+      transition: background-color $trans-default, color $trans-default;
+    }
+  }
+
+  &--transparent {
+    padding: 15px 49px;
+    color: $color-nero;
+    background-color: $color-transparent;
+    border: 2px solid $color-nero;
+    transition: background-color $trans-default, color $trans-default;
+
+    @include vp-767 {
+      background-color: $color-default-white;
+    }
+
+    @include hover-focus {
+      color: $color-default-white;
+      background-color: $color-nero;
+      transition: background-color $trans-default, color $trans-default;
+    }
+  }
+
+  &--icon {
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    background-color: $color-accent-second;
+    transition: background-color $trans-default;
+
+    svg {
+      width: 17px;
+      height: 17px;
+      color: $color-default-white;
+    }
+
+    @include hover-focus {
+      background-color: $color-kournikova;
+      transition: background-color $trans-default;
+    }
+  }
+
+  &--radius-50 {
+    border-radius: 50%;
+  }
+
+  &--radius-66 {
+    border-radius: 66px;
+  }
+
+  &--radius-62 {
+    border-radius: 62px;
+  }
+
+  &:disabled {
+    background-color: $color-light-grey-2;
+    pointer-events: none;
+  }
+}

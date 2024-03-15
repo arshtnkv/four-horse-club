@@ -1,0 +1,15 @@
+mixin intro()
+  section.intro
+    .container
+      .intro__logo
+        +icon("logo", 245, 36)
+      h1.intro__title.title.title--h1
+        | Превратите уездный город
+        span.text-center в&nbsp;столицу
+        span.text-right земного шара
+      p.intro__sub Оплатите взнос на&nbsp;телеграммы для&nbsp;организации Международного васюкинского турнира по&nbsp;шахматам
+      .intro__btns
+          +btn({text: "Поддержать шахматную мысль", href: "#"}).btn--black.btn--radius-66
+          +btn({text: "Подробнее о турнире", href: "#"}).btn--transparent.btn--radius-66
+    .intro__image
+      +img("content/intro", "intro", "png", 1920, 700, "Image")

@@ -1,0 +1,20 @@
+@import "vendor/normalize";
+@import "vendor/swiper";
+
+@import "variables";
+@import "mixins";
+@import "global/fonts";
+@import "global/reboot";
+@import "global/utils";
+@import "global/container";
+
+@import "blocks/footer";
+@import "blocks/btn";
+@import "blocks/title";
+@import "blocks/intro";
+@import "blocks/slider";
+@import "blocks/ticker";
+@import "blocks/info";
+@import "blocks/stages";
+@import "blocks/user-card";
+@import "blocks/users";

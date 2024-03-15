@@ -1,0 +1,8 @@
+mixin user-card(data)
+  .user-card&attributes(attributes)
+    .user-card__img
+      +img(data.img.path, data.img.name, data.img.format, data.img.width, data.img.height, data.img.altText)
+    h4.user-card__title.title.title--h4 !{data.name}
+    p.user-card__status !{data.status}
+    .user-card__btn
+      +btn({text: "Подробнее", href: data.link}).btn--blue.btn--radius-62

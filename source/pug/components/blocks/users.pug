@@ -1,0 +1,18 @@
+mixin users()
+  section.users
+    .container
+      .users__header
+        h2.title.title--h2 Участники турнира
+        .slider-controls(data-da=".users .container, 1023")
+          +btn({
+            iconName: "arrow-left",
+            iconWidth: "17",
+            iconHeight: "9"
+            }).btn--icon.btn--radius-50.btn--prev(aria-label="Назад")
+          .slider-pagination
+          +btn({
+            iconName: "arrow-right",
+            iconWidth: "17",
+            iconHeight: "9"
+            }).btn--icon.btn--radius-50.btn--next(aria-label="Вперёд")
+      +slider(slider.users, "users")

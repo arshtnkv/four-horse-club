@@ -1,0 +1,9 @@
+mixin stages()
+  section.stages
+    .container
+      h2.stages__title
+        span.title.title--h2 Этапы преображения<br>Васюков
+        a.btn.btn--link(href="#") Будущие источники обогащения васюкинцев
+      .stages__image
+        +img("content", "airplane", "png", 377, 140, "Airplane")
+      +slider(slider.stages.list, "stages")

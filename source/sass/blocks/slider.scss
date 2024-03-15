@@ -1,0 +1,190 @@
+.slider {
+  cursor: grab;
+
+  &__container {
+    overflow: hidden;
+  }
+
+  &__wrapper {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    width: 151px;
+    margin-bottom: 3px;
+
+    @include vp-1023 {
+      margin: 0 auto;
+    }
+
+    .btn {
+      flex-shrink: 0;
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 90px;
+
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: $color-accent-second;
+    }
+  }
+
+  &--stages {
+    cursor: default;
+
+    @include vp-767 {
+      cursor: grab;
+    }
+
+    .slider {
+
+      &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 120%;
+        counter-reset: num;
+
+        @include vp-1023 {
+          font-size: 18px;
+        }
+
+        @include vp-767 {
+          display: flex;
+          gap: 0;
+          margin-bottom: 27px;
+        }
+      }
+
+      &__controls {
+        display: none;
+
+        @include vp-767 {
+          display: flex;
+          width: 300px;
+        }
+      }
+
+
+
+      &__item {
+        position: relative;
+        min-height: 112px;
+        padding: 20px 20px 20px 72px;
+        background-color: $color-accent-main;
+        background-image: url("../img/content/intro/main.png");
+
+        @include vp-1023 {
+          padding: 72px 20px 20px 20px;
+        }
+
+        @include vp-767 {
+          min-height: 300px;
+          padding: 62px 20px 34px 72px;
+        }
+
+        &::before {
+          position: absolute;
+          top: 20px;
+          left: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 36px;
+          height: 36px;
+          background-color: $color-default-white;
+          border-radius: 50%;
+          counter-increment: num;
+          content: counter(num);
+
+          @include vp-767 {
+            top: 62px;
+          }
+        }
+
+        &:nth-child(3) {
+          grid-column: 3/4;
+          grid-row: 1/3;
+        }
+
+        &:nth-child(7) {
+          padding-right: 324px;
+          grid-column: 2/4;
+          grid-row: 3/4;
+
+          @include vp-767 {
+            padding-right: 20px;
+          }
+        }
+      }
+
+      &__text {
+        margin: 0;
+      }
+    }
+  }
+
+  &--users {
+    @include vp-1023 {
+      margin-bottom: 40px;
+    }
+
+    .slider {
+      &__item {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: space-between;
+  width: 151px;
+  margin-bottom: 3px;
+
+  @include vp-1023 {
+    margin: 0 auto;
+  }
+
+  .btn {
+    flex-shrink: 0;
+  }
+}
+
+.slider-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 90px;
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $color-accent-second;
+  }
+}

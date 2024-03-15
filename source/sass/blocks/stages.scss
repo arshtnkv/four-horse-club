@@ -1,0 +1,77 @@
+.stages {
+  & .container {
+    position: relative;
+    padding-bottom: 200px;
+
+    @include vp-767 {
+      padding-bottom: 115px;
+    }
+  }
+
+  &__title {
+    position: relative;
+    margin: 0 0 54px;
+
+    @include vp-767 {
+      margin-bottom: 148px;
+    }
+
+    .title {
+      @include vp-1023 {
+        display: block;
+        margin-bottom: 14px;
+      }
+    }
+
+    .btn {
+      position: absolute;
+      bottom: 14px;
+      left: 300px;
+      max-width: 250px;
+      font-size: 20px;
+      line-height: 100%;
+      font-weight: 400;
+
+      @include vp-1023 {
+        position: static;
+        display: block;
+        max-width: 100%;
+        font-size: 18px;
+        line-height: 120%;
+      }
+    }
+  }
+
+  &__image {
+    position: absolute;
+    bottom: 26%;
+    right: 1.6%;
+    z-index: 2;
+
+    @include vp-1023 {
+      bottom: 30%;
+      right: 0;
+    }
+
+    @include vp-767 {
+      top: 18%;
+      right: 48%;
+      bottom: unset;
+      transform: translateX(50%) rotate(-4.31deg);
+    }
+
+    @media (max-width: 508px) {
+      top: 23.8%;
+    }
+
+    img {
+      width: 385px;
+      height: auto;
+
+      @include vp-767 {
+        min-width: 330px;
+        width: 317px;
+      }
+    }
+  }
+}
